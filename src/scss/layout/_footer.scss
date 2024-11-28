@@ -1,0 +1,34 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer{
+    background-color: v.$blanco;
+    margin-top: 10rem;
+    padding: 2rem;
+    .footer-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        @include m.tablet{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        nav{
+            a{
+                color: v.$black;
+                font-size: 2rem;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            @include m.tablet{
+                flex-direction: row;
+            }
+           
+        }
+    }
+}

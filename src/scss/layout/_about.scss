@@ -1,0 +1,46 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+
+.about-me{
+   
+    /* z-index: 1; */
+    text-align: center;
+
+    @include m.tablet{
+  
+        margin-top: -15rem;
+    }
+    
+
+
+    @include m.desktopXL{
+        left: 30rem; 
+    }
+    
+    h2{
+        font-size: 6rem;
+        color: v.$blanco;
+        @include m.tablet{
+            font-size: 10rem;
+        }
+    }
+
+    p{
+        color: v.$blanco;
+        border-bottom: 1px solid v.$blanco;
+        padding: 2rem;
+    }
+} 
+
+.conocimiento{
+    color: v.$blanco;
+    h3{
+        border-bottom: 1px solid v.$blanco;
+        padding: 2rem;
+    }
+    .conocimiento-lista{
+        list-style: none;
+    }
+}
+

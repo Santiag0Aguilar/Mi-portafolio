@@ -1,0 +1,16 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.btn-1{
+    @include m.boton(v.$Crimson-Plum, block);
+    @include m.tablet{
+        display: inline;
+    }
+} 
+ 
+.btn-2{
+    @include m.boton(v.$Rosewood-Pink, block);
+    @include m.tablet{
+        display: inline;
+    }
+}
