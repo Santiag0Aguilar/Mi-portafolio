@@ -20,7 +20,7 @@
         align-items: center;
         padding: 10rem;
 
-        @include m.desktop{
+        @include m.tablet{
             flex-direction: row;
         }
     }
@@ -28,6 +28,11 @@
 
 
 .box-contact_text{
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    align-items: flex-start; /* Alinea todo al lado izquierdo */
+    gap: 1rem; /* Espaciado uniforme entre los elementos */
+    width: 100%; /* Asegura que todo ocupe el mismo ancho */
         .contact-text{
             img{
                 width: 5rem;
@@ -50,8 +55,10 @@
   align-items: center;
   @include m.desktopXL{
     flex-direction: row;
+    justify-content: space-between;
   }
 }
+
 
 .mision{
     background-color: green;
@@ -68,4 +75,15 @@
         padding: 2rem;
         line-height: 2;
     }
+}
+
+#map {
+    height: 400px;
+    width: 50%;
+} 
+
+.ubicacion{
+   text-align: center;
+   
+       color: v.$blanco;
 }

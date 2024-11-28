@@ -1,34 +1,55 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
-.footer{
-    background-color: v.$blanco;
-    margin-top: 10rem;
+.footer {
+    visibility: hidden; /* Oculto inicialmente */
+    position: fixed; /* Fijo en la ventana */
+    bottom: -100%; /* Fuera de la vista */
+    left: 0;
+    width: 100%;
+    background-color: v.$blanco; /* Usando la variable de color blanco */
+    margin-top: 0; /* Margen innecesario cuando es fixed */
     padding: 2rem;
-    .footer-nav{
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    transition: bottom 0.3s ease, top 0.3s ease, visibility 0.3s ease; /* Transiciones suaves */
+
+    &.header-visible {
+        visibility: visible; /* Visible cuando actúa como header */
+        bottom: auto;
+        top: 0; /* Se posiciona en la parte superior */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    }
+
+    .footer-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
 
-        @include m.tablet{
+        @include m.tablet {
             flex-direction: row;
             justify-content: space-between;
         }
 
-        nav{
-            a{
-                color: v.$black;
-                font-size: 2rem;
-            }
+        nav {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 1rem;
-            @include m.tablet{
+
+            @include m.tablet {
                 flex-direction: row;
             }
-           
+
+            a {
+                color: v.$black; /* Color negro */
+                font-size: 2rem;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline; /* Efecto hover */
+                }
+            }
         }
     }
 }
