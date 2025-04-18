@@ -1,5 +1,0 @@
-# Ignorar la carpeta node_modules
-node_modules/
-
-# Ignorar solo la carpeta img dentro de build
-build/img/
