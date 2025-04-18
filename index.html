@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi portafolio</title>
+    <!-- Hoja de estilos con su pre cargador -->
+    <link rel="preload" href="/build/css/index.css" type="stylesheet" />
+    <link rel="stylesheet" href="/build/css/index.css" />
+
+    <!-- GoogleFonts Roboto -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+  <body>
+    <header class="header" data-aos="fade-down" data-aos-duration="2000">
+      <div class="content">
+        <a href="index.html">
+          <h1>Mi <span>portafolio</span></h1>
+        </a>
+
+        <nav>
+          <a href="proyecto.html">Mis proyectos</a>
+          <a href="contacto.html">Sobre mi</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Aqui comienza la seccion completa del cuadro(Almacena todo) -->
+    <main
+      class="Complet-Box content"
+      data-aos="fade-left"
+      data-aos-duration="2000"
+    >
+      <div>
+        <!-- Caja 1 de la parte del estado para arriba -->
+        <div class="Personal-Data">
+          <img src="/build/img/twitchperfil.jpg" alt="Foto de mi perfil" />
+          <h1>Santiago Aguilar</h1>
+          <p class="Location-Data">Apaxco, Estado de Mexico</p>
+          <p>Front-end developer</p>
+        </div>
+        <!-- Fin caja 1 -->
+
+        <!-- Caja 2 de la parte del estado para abajo -->
+        <div class="Contact-Data">
+          <!-- Caja de los botones -->
+          <div class="Contact-Data-Btn">
+            <a href="https://github.com/Santiag0Aguilar">GitHub</a>
+            <a href="https://www.frontendmentor.io/profile/Santiag0Aguilar"
+              >Frontend Mentor</a
+            >
+            <a
+              href="https://www.linkedin.com/in/santiago-javier-aguilar-cruz-a32a7a2b3/?trk=opento_sprofile_topcard"
+              >LinkedIn</a
+            >
+            <a href="mailto:aguilarsantiagoguil2007@gmail.com"
+              >Envíame un correo</a
+            >
+            <a href="https://www.instagram.com/san_tiagoac/">Instagram</a>
+          </div>
+          <!-- Fin caja botones -->
+        </div>
+        <!-- Fin caja 2 -->
+      </div>
+    </main>
+    <!-- Fin seccion completa -->
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

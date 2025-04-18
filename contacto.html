@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi portafolio</title>
+    <link rel="preload" href="build/css/index.css" as="style" />
+    <link rel="stylesheet" href="build/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+  <body>
+    <header
+      data-aos="fade-down"
+      data-aos-duration="2000"
+      class="header"
+      data-aos="fade-up"
+      data-aos-duration="800"
+    >
+      <div class="content">
+        <a href="index.html">
+          <h1>Mi <span>portafolio</span></h1>
+        </a>
+
+        <nav>
+          <a href="proyecto.html">Mis proyectos</a>
+          <a href="contacto.html">Sobre mi</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="About content">
+      <div>
+        <h2 data-aos="fade-up" data-aos-duration="2000">Sobre mi</h2>
+
+        <p class="AboutMe" data-aos="fade-down" data-aos-duration="2000">
+          Soy un apasionado del desarrollo web y la tecnología, actualmente
+          cursando el último año de preparatoria. He desarrollado aplicaciones
+          web completas, integrando tanto el diseño de interfaces como la lógica
+          del lado del servidor. Busco una oportunidad como desarrollador Full
+          Stack Junior para seguir creciendo profesionalmente. Mi compromiso con
+          el aprendizaje continuo me impulsa a mantenerme al día con las buenas
+          prácticas y tendencias del sector, con el objetivo de aportar
+          soluciones eficientes e innovadoras.
+        </p>
+      </div>
+
+      <section data-aos="fade-down" data-aos-duration="2000" class="About-Data">
+        <h3>Tecnologias</h3>
+        <ul class="About-Data__list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>SASS</li>
+          <li>PHP</li>
+          <li>SQL</li>
+          <li>Consumo de APIs</li>
+          <li>Ingles conversacional básico</li>
+        </ul>
+      </section>
+    </main>
+
+    <section
+      class="Contact-Box content"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <h2>Contacto</h2>
+
+      <div class="Contact-Data__Full">
+        <img
+          class="Contact-Data__Perfil"
+          src="build/img/perfil.png"
+          alt="Foto Santiago"
+        />
+        <div class="Contact-Links">
+          <div class="Contact-Whats Contact-Link">
+            <a
+              href="https://api.whatsapp.com/send?phone=5657078529&text=Hola%20Santiago,%20me%20gustaría%20contactarte"
+              target="_blank"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
+              <img
+                src="build/img/whatsapp-icon-logo-svgrepo-com.svg"
+                alt="Whawatsapp logo"
+              />
+              <p>56 5707 8529</p></a
+            >
+          </div>
+
+          <div class="Contacto-Email Contact-Link">
+            <a
+              href="mailto:santiago.aguilar.dev@gmail.com?subject=Contacto%20desde%20mi%20web&body=Hola%20Santiago%2C%20quiero%20ponerme%20en%20contacto%20contigo."
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
+              <img src="build/img/gmail-svgrepo-com.svg" alt="Gmail logo" />
+              <p>Gmail</p>
+            </a>
+          </div>
+
+          <div class="Contact-Linkedin Contact-Link">
+            <a
+              href="https://www.linkedin.com/in/santiago-javier-aguilar-cruz-a32a7a2b3/"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
+              <img src="build/img/linkedin.webp" alt="Linkedin logo" />
+              <p>Linkedin</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="ubicacion content"
+      data-aos="flip-up"
+      data-aos-duration="3000"
+    >
+      <h2>Mi ubicacion</h2>
+      <p>
+        Aunque me encuentro en Apaxco, tengo la disposición de poder mover a
+        donde sea requerido una vez terminando la preparatoria.
+      </p>
+
+      <div id="map" style="height: 400px; width: 100%"></div>
+    </section>
+
+    <script src="build/scripts/app.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
