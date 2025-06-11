@@ -3,51 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- Hoja de estilos con su pre cargador -->
-    <link rel="preload" href="build/css/index.css" type="stylesheet" />
+    <title id="title">Mi portafolio</title>
     <link rel="stylesheet" href="build/css/index.css" />
-
-    <!-- GoogleFonts Roboto -->
-
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- AOS CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
   <body>
-    <header class="header">
-      <div class="content">
-        <a href="index.html">
-          <h1>Mi <span>portafolio</span></h1>
-        </a>
-
-        <nav>
-          <a href="proyecto.html">Mis proyectos</a>
-          <a href="contacto.html">Sobre mi</a>
-        </nav>
+    <header class="header" data-aos="fade-down" data-aos-duration="1000">
+      <div class="header__texto">
+        <a href="index.html"><h1>Santiago</h1></a>
+        <p>santiago.aguilar.dev@gmail.com</p>
       </div>
+      <img
+        class="MenuSvg barra"
+        src="build/img/menuSvg.svg"
+        alt="Barras Svg menu"
+      />
+      <nav class="header__nav menu-desplegable">
+        <a href="proyecto.html" id="projects">Projects</a>
+      </nav>
     </header>
 
+    <div class="circle-container" data-aos="fade-down" data-aos-delay="300">
+      <div class="big-circle">
+        <div class="Lenguages">
+          <p class="languageES language lenguageSelected">ES</p>
+          <p class="languageEN language">EN</p>
+        </div>
+        <div class="small-circle"></div>
+      </div>
+    </div>
+
     <main class="content">
-      <h1>Mis proyecto</h1>
+      <h1
+        class="centrar-texto"
+        id="projectsTitle"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
+        Mis proyectos
+      </h1>
+
       <div class="Proyectos">
-        <!-- Proyecto caja -->
-        <div class="Proyecto">
+        <!-- Proyecto 1 -->
+        <div class="Proyecto" data-aos="fade-up" data-aos-delay="200">
           <img src="build/img/proyectos/Calculadora.PNG" alt="Proyecto 1" />
           <div class="Proyecto__info">
-            <h3>Proyecto Calculadora</h3>
-            <p>
+            <h3 id="project1Title">Proyecto Calculadora</h3>
+            <p id="project1Desc">
               Calculadora funcional con diseño responsivo inspirada en un reto
               de Frontend Mentor. Soporta operaciones básicas (suma, resta,
               multiplicación, división), interfaz de usuario intuitiva y tres
@@ -66,19 +80,6 @@
               </ul>
             </div>
             <div class="Proyecto__info--links">
-              <svg
-                height="32"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                version="1.1"
-                width="32"
-                data-view-component="true"
-                class="octicon octicon-mark-github v-align-middle"
-              >
-                <path
-                  d="M12 1C5.9225 1 1 5.9225 1 12C1 16.8675 4.14875 20.9787 8.52125 22.4362C9.07125 22.5325 9.2775 22.2025 9.2775 21.9137C9.2775 21.6525 9.26375 20.7862 9.26375 19.865C6.5 20.3737 5.785 19.1912 5.565 18.5725C5.44125 18.2562 4.905 17.28 4.4375 17.0187C4.0525 16.8125 3.5025 16.3037 4.42375 16.29C5.29 16.2762 5.90875 17.0875 6.115 17.4175C7.105 19.0812 8.68625 18.6137 9.31875 18.325C9.415 17.61 9.70375 17.1287 10.02 16.8537C7.5725 16.5787 5.015 15.63 5.015 11.4225C5.015 10.2262 5.44125 9.23625 6.1425 8.46625C6.0325 8.19125 5.6475 7.06375 6.2525 5.55125C6.2525 5.55125 7.17375 5.2625 9.2775 6.67875C10.1575 6.43125 11.0925 6.3075 12.0275 6.3075C12.9625 6.3075 13.8975 6.43125 14.7775 6.67875C16.8813 5.24875 17.8025 5.55125 17.8025 5.55125C18.4075 7.06375 18.0225 8.19125 17.9125 8.46625C18.6138 9.23625 19.04 10.2125 19.04 11.4225C19.04 15.6437 16.4688 16.5787 14.0213 16.8537C14.42 17.1975 14.7638 17.8575 14.7638 18.8887C14.7638 20.36 14.75 21.5425 14.75 21.9137C14.75 22.2025 14.9563 22.5462 15.5063 22.4362C19.8513 20.9787 23 16.8537 23 12C23 5.9225 18.0775 1 12 1Z"
-                ></path>
-              </svg>
               <div class="Link">
                 <a
                   href="https://santiag0aguilar.github.io/CalculadoraFrontEndMentor/"
@@ -86,19 +87,19 @@
                 >
                 <a
                   href="https://github.com/Santiag0Aguilar/CalculadoraFrontEndMentor/"
-                  >Codigo</a
+                  >Código</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <!-- Proyecto caja fin-->
-        <!-- Proyecto caja -->
-        <div class="Proyecto">
-          <img src="build/img/proyectos/ArtLight.PNG" alt="Proyecto 1" />
+
+        <!-- Proyecto 2 -->
+        <div class="Proyecto" data-aos="fade-up" data-aos-delay="400">
+          <img src="build/img/proyectos/ArtLight.PNG" alt="Proyecto 2" />
           <div class="Proyecto__info">
-            <h3>Static Website</h3>
-            <p>
+            <h3 id="project2Title">Static Website</h3>
+            <p id="project2Desc">
               Landing page estática diseñada para una galería de arte digital,
               con un enfoque visual limpio y moderno. El sitio muestra una
               estructura bien organizada con navegación fluida, uso de
@@ -119,35 +120,22 @@
               </ul>
             </div>
             <div class="Proyecto__info--links">
-              <svg
-                height="32"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                version="1.1"
-                width="32"
-                data-view-component="true"
-                class="octicon octicon-mark-github v-align-middle"
-              >
-                <path
-                  d="M12 1C5.9225 1 1 5.9225 1 12C1 16.8675 4.14875 20.9787 8.52125 22.4362C9.07125 22.5325 9.2775 22.2025 9.2775 21.9137C9.2775 21.6525 9.26375 20.7862 9.26375 19.865C6.5 20.3737 5.785 19.1912 5.565 18.5725C5.44125 18.2562 4.905 17.28 4.4375 17.0187C4.0525 16.8125 3.5025 16.3037 4.42375 16.29C5.29 16.2762 5.90875 17.0875 6.115 17.4175C7.105 19.0812 8.68625 18.6137 9.31875 18.325C9.415 17.61 9.70375 17.1287 10.02 16.8537C7.5725 16.5787 5.015 15.63 5.015 11.4225C5.015 10.2262 5.44125 9.23625 6.1425 8.46625C6.0325 8.19125 5.6475 7.06375 6.2525 5.55125C6.2525 5.55125 7.17375 5.2625 9.2775 6.67875C10.1575 6.43125 11.0925 6.3075 12.0275 6.3075C12.9625 6.3075 13.8975 6.43125 14.7775 6.67875C16.8813 5.24875 17.8025 5.55125 17.8025 5.55125C18.4075 7.06375 18.0225 8.19125 17.9125 8.46625C18.6138 9.23625 19.04 10.2125 19.04 11.4225C19.04 15.6437 16.4688 16.5787 14.0213 16.8537C14.42 17.1975 14.7638 17.8575 14.7638 18.8887C14.7638 20.36 14.75 21.5425 14.75 21.9137C14.75 22.2025 14.9563 22.5462 15.5063 22.4362C19.8513 20.9787 23 16.8537 23 12C23 5.9225 18.0775 1 12 1Z"
-                ></path>
-              </svg>
               <div class="Link">
                 <a href="https://santiag0aguilar.github.io/ArtLight/">Demo</a>
                 <a href="https://github.com/Santiag0Aguilar/ArtLight/"
-                  >Codigo</a
+                  >Código</a
                 >
               </div>
             </div>
           </div>
         </div>
-        <!-- Proyecto caja fin-->
-        <!-- Proyecto caja -->
-        <div class="Proyecto">
-          <img src="build/img/proyectos/Alaburger.webp" alt="Proyecto 1" />
+
+        <!-- Proyecto 3 -->
+        <div class="Proyecto" data-aos="fade-up" data-aos-delay="600">
+          <img src="build/img/proyectos/Alaburger.webp" alt="Proyecto 3" />
           <div class="Proyecto__info">
-            <h3>Menú Digital Restaurante Incomparable</h3>
-            <p>
+            <h3 id="project3Title">Menú Digital Restaurante Incomparable</h3>
+            <p id="project3Desc">
               Interfaz digital para mostrar el menú de un restaurante de forma
               visual y ordenada. El diseño responsivo está enfocado en la
               experiencia móvil, permitiendo a los clientes explorar fácilmente
@@ -166,31 +154,58 @@
               </ul>
             </div>
             <div class="Proyecto__info--links">
-              <svg
-                height="32"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                version="1.1"
-                width="32"
-                data-view-component="true"
-                class="octicon octicon-mark-github v-align-middle"
-              >
-                <path
-                  d="M12 1C5.9225 1 1 5.9225 1 12C1 16.8675 4.14875 20.9787 8.52125 22.4362C9.07125 22.5325 9.2775 22.2025 9.2775 21.9137C9.2775 21.6525 9.26375 20.7862 9.26375 19.865C6.5 20.3737 5.785 19.1912 5.565 18.5725C5.44125 18.2562 4.905 17.28 4.4375 17.0187C4.0525 16.8125 3.5025 16.3037 4.42375 16.29C5.29 16.2762 5.90875 17.0875 6.115 17.4175C7.105 19.0812 8.68625 18.6137 9.31875 18.325C9.415 17.61 9.70375 17.1287 10.02 16.8537C7.5725 16.5787 5.015 15.63 5.015 11.4225C5.015 10.2262 5.44125 9.23625 6.1425 8.46625C6.0325 8.19125 5.6475 7.06375 6.2525 5.55125C6.2525 5.55125 7.17375 5.2625 9.2775 6.67875C10.1575 6.43125 11.0925 6.3075 12.0275 6.3075C12.9625 6.3075 13.8975 6.43125 14.7775 6.67875C16.8813 5.24875 17.8025 5.55125 17.8025 5.55125C18.4075 7.06375 18.0225 8.19125 17.9125 8.46625C18.6138 9.23625 19.04 10.2125 19.04 11.4225C19.04 15.6437 16.4688 16.5787 14.0213 16.8537C14.42 17.1975 14.7638 17.8575 14.7638 18.8887C14.7638 20.36 14.75 21.5425 14.75 21.9137C14.75 22.2025 14.9563 22.5462 15.5063 22.4362C19.8513 20.9787 23 16.8537 23 12C23 5.9225 18.0775 1 12 1Z"
-                ></path>
-              </svg>
               <div class="Link">
                 <a href="https://incomparable-maamoul-bbe2c1.netlify.app/"
                   >Demo</a
                 >
-                <a href="#">Codigo</a>
+                <a href="#">Código</a>
               </div>
             </div>
           </div>
         </div>
-        <!-- Proyecto caja fin-->
       </div>
     </main>
+
+    <footer class="footer" data-aos="fade-up" data-aos-delay="900">
+      <div class="footer__social">
+        <a
+          href="https://www.facebook.com/profile.php?id=100072149845569"
+          target="_blank"
+          ><img src="build/img/facebook-svgrepo-com.svg" alt="facebook"
+        /></a>
+        <a href="https://www.instagram.com/san_tiagoac/" target="_blank"
+          ><img src="build/img/instagram-svgrepo-com.svg" alt="instagram"
+        /></a>
+        <div class="footer__social__github">
+          <a href="https://github.com/Santiag0Aguilar" target="_blank"
+            ><img src="build/img/github-svgrepo-com.svg" alt="github"
+          /></a>
+          <div class="footer__social__github__location">
+            <img src="build/img/locate-svgrepo-com.svg" alt="locate" />
+            <p id="state">State of Mexico</p>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="https://wa.me/525657078529?text=Hola,%20me%20gustaría%20contactarme%20con%20usted."
+        target="_blank"
+      >
+        <div class="footer__contact">
+          <div class="footer__contact__circle">
+            <div class="circleContact"></div>
+            <img src="build/img/chat-round-line-svgrepo-com.svg" alt="chat" />
+          </div>
+          <p id="letsChat">Let's chat</p>
+        </div>
+      </a>
+    </footer>
+
+    <script src="build/scripts/translations.js"></script>
+    <script src="build/scripts/app.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init();
     </script>
