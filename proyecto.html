@@ -44,129 +44,178 @@
         <div class="small-circle"></div>
       </div>
     </div>
-
-    <main class="content">
-      <h1
-        class="centrar-texto"
-        id="projectsTitle"
-        data-aos="zoom-in"
-        data-aos-duration="1000"
-      >
-        Mis proyectos
-      </h1>
-
-      <div class="Proyectos">
-        <!-- Proyecto 1 -->
-        <div class="Proyecto" data-aos="fade-up" data-aos-delay="200">
-          <img src="build/img/proyectos/Calculadora.PNG" alt="Proyecto 1" />
-          <div class="Proyecto__info">
-            <h3 id="project1Title">Proyecto Calculadora</h3>
-            <p id="project1Desc">
-              Calculadora funcional con diseño responsivo inspirada en un reto
-              de Frontend Mentor. Soporta operaciones básicas (suma, resta,
-              multiplicación, división), interfaz de usuario intuitiva y tres
-              temas visuales distintos que pueden cambiarse dinámicamente.
-            </p>
-            <div class="Proyecto__info--tecnologias">
-              <ul>
-                <li><span class="meta-dato">HTML5</span></li>
-                <li>
-                  <span class="meta-dato">CSS3</span> (Flexbox, Grid y custom
-                  properties)
-                </li>
-                <li>
-                  <span class="meta-dato">JavaScript</span> (sin frameworks)
-                </li>
-              </ul>
-            </div>
-            <div class="Proyecto__info--links">
-              <div class="Link">
-                <a
-                  href="https://santiag0aguilar.github.io/CalculadoraFrontEndMentor/"
-                  >Demo</a
-                >
-                <a
-                  href="https://github.com/Santiag0Aguilar/CalculadoraFrontEndMentor/"
-                  >Código</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 2 -->
-        <div class="Proyecto" data-aos="fade-up" data-aos-delay="400">
-          <img src="build/img/proyectos/ArtLight.PNG" alt="Proyecto 2" />
-          <div class="Proyecto__info">
-            <h3 id="project2Title">Static Website</h3>
-            <p id="project2Desc">
-              Landing page estática diseñada para una galería de arte digital,
-              con un enfoque visual limpio y moderno. El sitio muestra una
-              estructura bien organizada con navegación fluida, uso de
-              tipografía elegante y distribución balanceada de imágenes y
-              contenido.
-            </p>
-            <div class="Proyecto__info--tecnologias">
-              <ul>
-                <li><span class="meta-dato">HTML5</span></li>
-                <li>
-                  <span class="meta-dato">CSS3</span> (Flexbox, Grid y media
-                  queries)
-                </li>
-                <li>
-                  <span class="meta-dato">JavaScript</span> (para interactividad
-                  simple)
-                </li>
-              </ul>
-            </div>
-            <div class="Proyecto__info--links">
-              <div class="Link">
-                <a href="https://santiag0aguilar.github.io/ArtLight/">Demo</a>
-                <a href="https://github.com/Santiag0Aguilar/ArtLight/"
-                  >Código</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 3 -->
-        <div class="Proyecto" data-aos="fade-up" data-aos-delay="600">
-          <img src="build/img/proyectos/Alaburger.webp" alt="Proyecto 3" />
-          <div class="Proyecto__info">
-            <h3 id="project3Title">Menú Digital Restaurante Incomparable</h3>
-            <p id="project3Desc">
-              Interfaz digital para mostrar el menú de un restaurante de forma
-              visual y ordenada. El diseño responsivo está enfocado en la
-              experiencia móvil, permitiendo a los clientes explorar fácilmente
-              los productos desde cualquier dispositivo.
-            </p>
-            <div class="Proyecto__info--tecnologias">
-              <ul>
-                <li><span class="meta-dato">HTML5</span></li>
-                <li>
-                  <span class="meta-dato">CSS3</span> (Mobile-first design,
-                  Flexbox)
-                </li>
-                <li>
-                  <span class="meta-dato">JavaScript</span> (sin frameworks)
-                </li>
-              </ul>
-            </div>
-            <div class="Proyecto__info--links">
-              <div class="Link">
-                <a href="https://incomparable-maamoul-bbe2c1.netlify.app/"
-                  >Demo</a
-                >
-                <a href="#">Código</a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="proyectos" id="proyectos">
+      <div class="proyectos__header" data-aos="fade-up">
+        <h2 class="proyectos__title">
+          Nuestro <span class="resaltar">trabajo</span>
+        </h2>
+        <p class="proyectos__subtitle">
+          Proyectos desarrollados que demuestran experiencia en frontend,
+          backend y aplicaciones web completas.
+        </p>
       </div>
-    </main>
 
-    <footer class="footer" data-aos="fade-up" data-aos-delay="900">
+      <div class="proyectos__grid">
+        <!-- CARD 1 -->
+        <article class="proyecto" data-aos="fade-up" data-aos-delay="100">
+          <div class="proyecto__img">
+            <img
+              src="build/img/proyectos/Calculadora.PNG"
+              alt="Proyecto Calculadora"
+            />
+          </div>
+          <div class="proyecto__content">
+            <h3>Proyecto Calculadora</h3>
+            <p>
+              Calculadora funcional con diseño responsivo inspirada en un reto
+              de Frontend Mentor. Incluye operaciones básicas y cambio dinámico
+              entre tres temas visuales.
+            </p>
+
+            <div class="proyecto__tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+
+            <a
+              href="https://santiag0aguilar.github.io/CalculadoraFrontEndMentor/"
+              class="proyecto__btn"
+              >Demo ↗</a
+            >
+            <a
+              href="https://github.com/Santiag0Aguilar/CalculadoraFrontEndMentor/"
+              class="proyecto__btn"
+              >Código ↗</a
+            >
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="proyecto" data-aos="fade-up" data-aos-delay="150">
+          <div class="proyecto__img">
+            <img src="build/img/proyectos/ArtLight.PNG" alt="ArtLight" />
+          </div>
+          <div class="proyecto__content">
+            <h3>ArtLight – Sitio Estático</h3>
+            <p>
+              Landing page estática para una galería de arte digital, con diseño
+              moderno, navegación fluida y una presentación visual limpia y
+              elegante.
+            </p>
+
+            <div class="proyecto__tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+
+            <a
+              href="https://santiag0aguilar.github.io/ArtLight/"
+              class="proyecto__btn"
+              >Demo ↗</a
+            >
+            <a
+              href="https://github.com/Santiag0Aguilar/ArtLight/"
+              class="proyecto__btn"
+              >Código ↗</a
+            >
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="proyecto" data-aos="fade-up" data-aos-delay="200">
+          <div class="proyecto__img">
+            <img
+              src="build/img/proyectos/ANIEI.jpeg"
+              alt="Backend Hackaton ANIEI"
+            />
+          </div>
+          <div class="proyecto__content">
+            <h3>Backend – App de Retos (Hackaton ANIEI)</h3>
+            <p>
+              Backend desarrollado con Node.js, Express y MongoDB para una
+              aplicación de retos personales, con autenticación, rachas y
+              publicaciones de progreso.
+            </p>
+
+            <div class="proyecto__tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>JWT</span>
+            </div>
+
+            <a
+              href="https://github.com/Santiag0Aguilar/backend-app-hackaton"
+              class="proyecto__btn"
+              >Código ↗</a
+            >
+          </div>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="proyecto" data-aos="fade-up" data-aos-delay="250">
+          <div class="proyecto__img">
+            <img
+              src="build/img/proyectos/Perfumeria.png"
+              alt="E-commerce PHP"
+            />
+          </div>
+          <div class="proyecto__content">
+            <h3>E-commerce – App Full Stack</h3>
+            <p>
+              Aplicación web tipo e-commerce con PHP y MySQL, con sistema de
+              usuarios, panel de administración, CRUD de productos y carrito de
+              compras.
+            </p>
+
+            <div class="proyecto__tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+              <span>CRUD</span>
+            </div>
+
+            <a
+              href="https://github.com/Santiag0Aguilar/Imperial"
+              class="proyecto__btn"
+              >Código ↗</a
+            >
+          </div>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="proyecto" data-aos="fade-up" data-aos-delay="300">
+          <div class="proyecto__img">
+            <img src="build/img/proyectos/restaurante.png" alt="Menú Digital" />
+          </div>
+          <div class="proyecto__content">
+            <h3>Menú Digital – Frontend</h3>
+            <p>
+              Interfaz web moderna para restaurante con carga dinámica de
+              productos mediante Fetch API, animaciones AOS y arquitectura
+              escalable.
+            </p>
+
+            <div class="proyecto__tags">
+              <span>HTML5</span>
+              <span>SCSS</span>
+              <span>JavaScript</span>
+              <span>Fetch API</span>
+            </div>
+
+            <a
+              href="https://santiag0aguilar.github.io/alaburger2/"
+              class="proyecto__btn"
+              >Demo ↗</a
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer" data-aos="fade-up">
       <div class="footer__social">
         <a
           href="https://www.facebook.com/profile.php?id=100072149845569"
