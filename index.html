@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>santiago.dev — Terminal</title>
+  </head>
+  <body>
+    <div class="terminal-wrapper" id="terminal-wrapper">
+      <div class="titlebar">
+        <div class="titlebar-buttons">
+          <span class="btn-close"></span><span class="btn-min"></span
+          ><span class="btn-max"></span>
+        </div>
+        <span class="titlebar-title">terminal — recruiter@portfolio:~</span>
+        <div class="titlebar-right">
+          <span class="status-dot"></span
+          ><span class="status-text">CONNECTED</span>
+        </div>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="output-area" id="output-area" aria-live="polite"></div>
+        <div class="input-row" id="input-row" style="display: none">
+          <span class="prompt"
+            ><span class="prompt-user">recruiter</span
+            ><span class="prompt-at">@</span
+            ><span class="prompt-host">portfolio</span
+            ><span class="prompt-colon">:</span
+            ><span class="prompt-path">~</span
+            ><span class="prompt-dollar">$</span></span
+          >
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="cli-input"
+              class="cli-input"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              aria-label="Type a command"
+            />
+            <span class="cursor" id="cursor"></span>
+            <div class="autocomplete-hint" id="ac-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="quick-bar">
+      <span class="quick-label">Quick access:</span>
+      <div class="quick-buttons">
+        <button class="quick-btn" data-cmd="about">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.58-7 8-7s8 3 8 7" /></svg
+          >About
+        </button>
+        <button class="quick-btn" data-cmd="skills">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" /></svg
+          >Skills
+        </button>
+        <button class="quick-btn" data-cmd="projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" />
+            <path d="M8 21h8M12 17v4" /></svg
+          >Projects
+        </button>
+        <button class="quick-btn" data-cmd="contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" /></svg
+          >Contact
+        </button>
+        <button class="quick-btn" data-cmd="cv">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" /></svg
+          >CV
+        </button>
+        <button class="quick-btn quick-btn--clear" data-cmd="clear">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <polyline points="3 6 5 6 21 6" />
+            <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+            <path d="M10 11v6M14 11v6" /></svg
+          >Clear
+        </button>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <span
+        >CDMX || Queretaro || Hidalgo <br />
+        Santiago · 2026</span
+      >
+      <span class="footer-hint"
+        >Press <kbd>TAB</kbd> to autocomplete · <kbd>↑</kbd
+        ><kbd>↓</kbd> history</span
+      >
+    </footer>
+
+    <script src="terminal.js" type="module"></script>
+  </body>
+</html>
